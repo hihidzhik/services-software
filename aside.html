@@ -11,21 +11,15 @@
 </head>
 <body>
 <aside class="sidebar">
-    <div class="sidebar__top">
-        <div class="sidebar__top-left">
-            <button class="sidebar-button close-button">
-                <img src="ic/close.svg" alt="Close">
-            </button>
-            <div class="header__logo">
-                <a href="#"><img src="ic/logo.svg" alt="CPS_logo"></a>
-            </div>
-        </div>
-        <div class="sidebar__top-right">
-            <button class="sidebar-button">
-                <img src="ic/search.svg" alt="Search">
-            </button>
-        </div>
-    </div>
+    <header class="sidebar__top">
+        <button class="sidebar-button close-button">
+            <img src="ic/close.svg" alt="Close">
+        </button>
+        <a href="#" class="logo"><img src="ic/logo.svg" alt="CPS_logo"></a>
+        <button class="sidebar-button">
+            <img src="ic/search.svg" alt="Search">
+        </button>
+    </header>
     <nav>
         <ul class="sidebar__menu">
             <li class="sidebar__menu-item"><a class="sidebar__link" href="#">Ремонт техники</a></li>
@@ -38,7 +32,7 @@
             <li class="sidebar__menu-item"><a class="sidebar__link" href="#">Контакты</a></li>
         </ul>
     </nav>
-    <div class="sidebar__bottom">
+    <footer class="sidebar__bottom">
         <ul class="sidebar__social">
             <li class="sidebar__social-item">
                 <button class="sidebar-button">
@@ -56,18 +50,16 @@
                 </button>
             </li>
         </ul>
-        <div class="sidebar__contacts">
+        <address class="sidebar__contacts">
             <a class="sidebar__link-contacts" href="mailto:mail@cps.com">mail@cps.com</a>
             <a class="sidebar__link-contacts sidebar__phone" href="tel:88008908900">8 800 890 8900</a>
-        </div>
-        <div>
-            <ul class="sidebar__lang-list">
-                <li><a href="#" class="sidebar__lang-link active">RU</a></li>
-                <li><a href="#" class="sidebar__lang-link">EN</a></li>
-                <li><a href="#" class="sidebar__lang-link">CH</a></li>
-            </ul>
-        </div>
-    </div>
+        </address>
+        <ul class="lang-list">
+            <li><a href="#" class="sidebar__lang-link active">RU</a></li>
+            <li><a href="#" class="sidebar__lang-link">EN</a></li>
+            <li><a href="#" class="sidebar__lang-link">CH</a></li>
+        </ul>
+    </footer>
 </aside>
 </body>
 </html>
