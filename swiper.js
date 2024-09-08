@@ -1,24 +1,27 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const showMoreButton = document.querySelector('.button-toggle');
-    const brandsContainer = document.querySelector('.swiper-wrapper');
-    let areBrandsVisible = false;
+if (window.innerWidth > 767) {
+    document.addEventListener('DOMContentLoaded', function () {
+        const showMoreButton = document.querySelector('.button-toggle');
+        const brandsContainer = document.querySelector('.swiper-wrapper');
+        let areBrandsVisible = false;
 
-    function toggleBrandsVisibility(visible) {
-        if (visible) {
-            brandsContainer.classList.remove('swiper-wrapper--collapsed');
-        } else {
-            brandsContainer.classList.add('swiper-wrapper--collapsed');
+        function toggleBrandsVisibility(visible) {
+            if (visible) {
+                brandsContainer.classList.remove('swiper-wrapper--collapsed');
+            } else {
+                brandsContainer.classList.add('swiper-wrapper--collapsed');
+            }
         }
-    }
 
-    showMoreButton.addEventListener('click', function () {
-        areBrandsVisible = !areBrandsVisible;
-        toggleBrandsVisibility(areBrandsVisible);
-        const buttonText = areBrandsVisible ? 'Скрыть' : 'Показать все';
-        showMoreButton.querySelector('.button-toggle__text').innerText = buttonText;
-        showMoreButton.classList.toggle('expanded', areBrandsVisible);
-    });
-
+        showMoreButton.addEventListener('click', function () {
+            areBrandsVisible = !areBrandsVisible;
+            toggleBrandsVisibility(areBrandsVisible);
+            const buttonText = areBrandsVisible ? 'Скрыть' : 'Показать все';
+            showMoreButton.querySelector('.button-toggle__text').innerText = buttonText;
+            showMoreButton.classList.toggle('expanded', areBrandsVisible);
+        });
+    })
+}
+else {
     const swiper = new Swiper('.swiper', {
         slidesPerView: "auto",
         pagination: {
@@ -26,5 +29,4 @@ document.addEventListener('DOMContentLoaded', function () {
             clickable: true,
         }
     })
-
-});
+}
