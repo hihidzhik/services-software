@@ -24,6 +24,7 @@ if (window.innerWidth > 767) {
 else {
     const swiper = new Swiper('.swiper', {
         slidesPerView: "auto",
+        slidesOffsetAfter: 16,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
