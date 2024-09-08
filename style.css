@@ -502,7 +502,7 @@ body {
     align-items: center;
 }
 
-.sidebar__lang-link {
+.lang-list__link {
     text-decoration: none;
     color: black;
 }
